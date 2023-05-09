@@ -1,0 +1,29 @@
+{
+  "name"        : "fs-backend-project-omarlandaeta",
+  "version"     : "1.0.0",
+  "description" : "Posible Juego de Skating",
+  "main"        : "index.js",
+  "scripts": {
+    "test"         : "echo \"Error: no test specified\" && exit 1",
+    "start"        : "node index.js",
+    "dev"          : "set PORT=3000 & nodemon index.js",
+    "docker:up"    : "docker-compose up",
+    "docker:start" : "docker-compose start",
+    "db:create"    : "node scripts/creation.js",
+    "db:insert"    : "node scripts/insertion.js"
+  },
+
+  "keywords"     : [],
+  "author"       : "",
+  "license"      : "ISC",
+
+  "dependencies" : {
+    "express" : "^4.18.2",
+    "slonik"  : "^33.3.1",
+    "uuid"    : "^9.0.0"
+  },
+
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
