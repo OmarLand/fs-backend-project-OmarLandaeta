@@ -12,4 +12,6 @@
 
 ## Buscando ideas para armar mis tablas para las bases de datos del proyecto:
 
-6. 
+6. Creamos las tablas de este proyecto serían: "skaters", "tricks", "awards", donde awards son los premios recibidos por los atletas en su momento, además de los tricks dominados por cada uno de los atletas.
+
+7. 
