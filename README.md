@@ -14,4 +14,12 @@
 
 6. Creamos las tablas de este proyecto serían: "skaters", "tricks", "awards", donde awards son los premios recibidos por los atletas en su momento, además de los tricks dominados por cada uno de los atletas.
 
-7. 
+7. Se añade las librerias para la autenticación y autorización a mi app
+
+8. Creo el endpoint de registro localhost:4000/auth/signup
+
+9. 
+
+10. 
+
+11. 

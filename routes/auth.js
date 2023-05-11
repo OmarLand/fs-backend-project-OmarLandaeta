@@ -2,12 +2,14 @@
 const router = require('express').Router()
 
 //Acá debajo voy creando las const que contendran cada ruta
-const authRouther = require('./auth');
+const authControllers = require('../controllers/auth');
 
 // Voy exportando las rutas:
 module.exports = ( db ) => {
 
-    router.use('/auth', authRouther(db))
+    router.post('/signup',  authControllers.signup( db ));
+    router.post('/signin',  authControllers.signin( db ));
+    router.post('/signout', authControllers.signout( db ));
 
     return router;
 }

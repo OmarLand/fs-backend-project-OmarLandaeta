@@ -1,10 +1,17 @@
 -- Queries para la creación de mis tablas:
 
-DROP TABLE IF EXISTS skaters;
-DROP TABLE IF EXISTS tricks;
-DROP TABLE IF EXISTS awards;
-DROP TABLE IF EXISTS specials;
+DROP TABLE IF EXISTS skaters  CASCADE;
+DROP TABLE IF EXISTS tricks   CASCADE;
+DROP TABLE IF EXISTS awards   CASCADE;
+DROP TABLE IF EXISTS specials CASCADE;
 
+
+-- Creo una tabla basica para registrar usuarios y hacer login
+CREATE TABLE IF NOT EXISTS users (
+    id           SERIAL PRIMARY KEY,
+    username     VARCHAR(50) NOT NULL UNIQUE,
+    userpassword VARCHAR(50) NOT NULL
+);
 
 --Creo la tabla que contendrá los Skaters atletas
 CREATE TABLE IF NOT EXISTS skaters ( 
@@ -21,7 +28,7 @@ CREATE TABLE IF NOT EXISTS tricks (
 
     id          SERIAL PRIMARY KEY,
     name        VARCHAR(50) NOT NULL,
-    description VARCHAR(100) NOT NULL,
+    description VARCHAR(250) NOT NULL,
     difficulty  INTEGER NOT NULL
 
 );
