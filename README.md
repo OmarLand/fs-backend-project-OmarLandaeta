@@ -16,10 +16,26 @@
 
 7. Se añade las librerias para la autenticación y autorización a mi app
 
-8. Creo el endpoint de registro localhost:4000/auth/signup
+8. Creo el endpoint de registro
 
-9. 
+```js
+  localhost:4000/auth/signup
+```
+  - Con este endpoint realizo el registro de usuarios en mi base de datos para acceder a las rutas que corresponda
 
-10. 
+
+9. Se crea los endpoints para signin, signout
+```js
+  localhost:4000/auth/signin
+```
+- Con este endpoind, podrá acceder usando el usuario antes registrado. Nota: Si no esta registrado no permite ingresar
+
+```js
+  localhost:4000/auth/signout
+```
+- Para cerrar la sesión o eliminar mis cookies que validan la autenticación del usuario uso este endpoint
+
+
+10. Se añade nuevas caracteristicas, para autenticación y validación del usuario
 
 11. 
