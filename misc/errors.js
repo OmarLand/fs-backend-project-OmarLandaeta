@@ -1,15 +1,19 @@
 module.exports = {
     400: {
       statusCode: 400,
-      error: new Error("something went wrong"),
+      error: new Error("Fields are mandatory!"),
     },
     wrong_data: {
       statusCode: 400,
-      error: new Error("Something is missing!"),
+      error: new Error("Username or Password wrong!"),
     },
     401: {
       statusCode: 401,
       error: new Error("unauthorized"),
+    },
+    timeout_access: {
+      statusCode: 401,
+      error: new Error(" Oh oh! No tienes autorización!"),
     },
     403: {
       statusCode: 403,

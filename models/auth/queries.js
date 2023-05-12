@@ -1,5 +1,4 @@
-const { sql } = require('slonik');
-
+const { sql }    = require('slonik');
 const insertUser = (username, userpassword) => sql.unsafe`
 
     INSERT INTO users ( username, userpassword )
@@ -8,7 +7,16 @@ const insertUser = (username, userpassword) => sql.unsafe`
     );
 `
 
+const selectByUserName = ( username ) => sql.unsafe`
+
+        SELECT username, userpassword
+        FROM users 
+        WHERE username LIKE ${username}
+
+`
+
 
 module.exports = {
     insertUser,
+    selectByUserName
 }

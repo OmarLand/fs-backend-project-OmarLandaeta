@@ -1,17 +1,17 @@
 // En este fichero voy creando las rutas a donde quiero llevar mis datos
 const router = require('express').Router()
+const { authorizer } = require('../middlewares')
 
 //Acá debajo voy creando las const que contendran cada ruta
-const authRoutes = require('./auth');
-const usersRoutes = require('./users');
+const usersControllers = require('../controllers/users');
 
 // Voy exportando las rutas:
-module.exports = ( db ) => {
+module.exports = (db ) => {
 
-    router.use('/auth',  authRoutes(db) )
-    router.use('/users', usersRoutes() )
+    router.get('/',  authorizer, usersControllers.getUser() );
 
     return router;
+    
 }
  
  

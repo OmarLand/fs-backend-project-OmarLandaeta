@@ -4,13 +4,14 @@ DROP TABLE IF EXISTS skaters  CASCADE;
 DROP TABLE IF EXISTS tricks   CASCADE;
 DROP TABLE IF EXISTS awards   CASCADE;
 DROP TABLE IF EXISTS specials CASCADE;
+DROP TABLE IF EXISTS users    CASCADE;
 
 
 -- Creo una tabla basica para registrar usuarios y hacer login
 CREATE TABLE IF NOT EXISTS users (
     id           SERIAL PRIMARY KEY,
-    username     VARCHAR(50) NOT NULL UNIQUE,
-    userpassword VARCHAR(50) NOT NULL
+    username     TEXT NOT NULL UNIQUE,
+    userpassword TEXT NOT NULL
 );
 
 --Creo la tabla que contendrá los Skaters atletas
