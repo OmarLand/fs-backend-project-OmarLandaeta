@@ -16,21 +16,21 @@
 
 7. Se añade las librerias para la autenticación y autorización a mi app
 
-8. Creo el endpoint de registro:
+8. Creo el endpoint de registro SIGNUP:
   - Con este endpoint realizo el registro de usuarios en mi base de datos para acceder a las rutas que corresponda
 
 ```js
   localhost:4000/auth/signup
 ```
 
-9. Se crea los endpoints para signin:
+9. Se crea los endpoints para SIGNIN:
 - Con este endpoind, podrá acceder usando el usuario antes registrado. Nota: Si no esta registrado no permite ingresar
 
 ```js
   localhost:4000/auth/signin
 ```
 
-10. Se crea el endpoint para cerrar sesión: signout.
+10. Se crea el endpoint para cerrar sesión: SIGNOUT.
 - Para cerrar la sesión o eliminar mis cookies que validan la autenticación del usuario uso este endpoint
 
 ```js
@@ -39,11 +39,18 @@
 
 11. Se añade nuevas caracteristicas, para autenticación y validación del usuario
 
-12. Se crea el endpoint para:
+12. Se crea el endpoint para SKATERS:
 - Permite visualizar todos aquellos atletas que se han registrado en mi base de datos
 
 ```js
   localhost:4000/skaters
 ```
 
-13. 
+13. Se crea el endpoint para ver trucos TRICKS:
+- Permite visualizar todos aquellos trucos, desde el más básico al mas complejo de todos con una descripción de ello
+
+```js
+  localhost:4000/tricks
+```
+
+14. 
