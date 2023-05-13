@@ -53,4 +53,11 @@
   localhost:4000/tricks
 ```
 
+14.  Se crea el endpoint para ver los premios de cada Atleta - Awards:
+- Permite ver todos los premios registrados que están relacionados con el atleta y con el truco ganador.
+
+```js
+ localhost:4000/awards
+```
+
 14. 
