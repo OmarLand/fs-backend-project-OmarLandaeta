@@ -20,13 +20,15 @@
   - Con este endpoint realizo el registro de usuarios en mi base de datos para acceder a las rutas que corresponda
 
 ```js
-  localhost:4000/auth/signup
+POST:
+   localhost:4000/auth/signup
 ```
 
 9. Se crea los endpoints para SIGNIN:
 - Con este endpoind, podrá acceder usando el usuario antes registrado. Nota: Si no esta registrado no permite ingresar
 
 ```js
+POST:
   localhost:4000/auth/signin
 ```
 
@@ -34,6 +36,7 @@
 - Para cerrar la sesión o eliminar mis cookies que validan la autenticación del usuario uso este endpoint
 
 ```js
+POST:
   localhost:4000/auth/signout
 ```
 
@@ -43,6 +46,7 @@
 - Permite visualizar todos aquellos atletas que se han registrado en mi base de datos
 
 ```js
+GET:
   localhost:4000/skaters
 ```
 
@@ -50,6 +54,7 @@
 - Permite visualizar todos aquellos trucos, desde el más básico al mas complejo de todos con una descripción de ello
 
 ```js
+GET:
   localhost:4000/tricks
 ```
 
@@ -57,6 +62,7 @@
 - Permite ver todos los premios registrados que están relacionados con el atleta y con el truco ganador.
 
 ```js
+GET:
  localhost:4000/awards
 ```
 
