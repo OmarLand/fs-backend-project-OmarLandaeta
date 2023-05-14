@@ -8,7 +8,7 @@ module.exports = ( db ) => async(req, res, next) => {
     
     const dbRes = await queries.selectSkaters( await db )();
 
-    console.log('====>', dbRes);
+    //console.log('====>', dbRes);
 
     if( !dbRes.ok ) return next(errors[500]);
 

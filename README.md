@@ -70,9 +70,17 @@ GET:
 ```
 
 15. Se crea el endpoind para ver los atletas según el truco y las competiciones ganadas por año de menor a mayor:
-- Se crea el endpoint que muestra las competiciones ganadas por los atletas, según el premio, truco ganado y ciudad donde ganó:
+- Muestra las competiciones ganadas por los atletas, según el premio, truco ganado y ciudad donde ganó:
 
 GET:
 ```js
   localhost:4000/skaters/competitions
+```
+
+16. Se crea el endpoint para la inserción de nuevos skaters en la tabla skaters.
+- Me permite insertar nuevos skaters para mostrar luego
+
+POST:
+```js
+  localhost:4000/skaters/new
 ```
