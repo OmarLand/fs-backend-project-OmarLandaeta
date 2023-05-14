@@ -112,3 +112,18 @@ POST:
 }
 
 ```
+
+18. Se crea el endpoint para agregar nuevos premios y se le asigna de forma aleatoria a los skaters con un truco random ganador:
+
+POST:
+```js
+  localhost:4000/awards/new
+```
+- El body para la inserción sería el siguiente:
+```js
+  {
+      "award_date"  : "YYYY-MM-DD",
+      "competition" : "Competición ganada",
+      "position"    : "1" //Deberá ser numérico
+  }
+```
