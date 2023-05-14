@@ -55,7 +55,7 @@ GET:
 
 GET:
 ```js
-  localhost:4000/skater/:id
+  localhost:4000/skaters/:id
 ```
 
 
