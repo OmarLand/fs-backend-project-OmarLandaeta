@@ -1,7 +1,7 @@
 const { sql } = require('slonik');
 
 // Llamo a la función que está dentro de fichero Queries
-const { selectAllSkaters, selectSkaterAwards } = require('./queries');
+const { selectAllSkaters, getSkatersAwarded } = require('./queries');
 
 
 const selectSkaters = (db) => async () => {
@@ -21,11 +21,15 @@ const selectSkaters = (db) => async () => {
     }
 }
 
-const selectSkateAward = ( db ) => async() => {
+const selectSkatersAwards = ( db ) => async() => {
 
     try{
 
-        const response = await db.query( selectSkaterAwards() );
+        const response = await db.query( getSkatersAwarded() );
+        return{
+            ok       : true,
+            response : response.rows
+        }
 
     } catch( error ) {
         return {
@@ -41,6 +45,6 @@ const selectSkateAward = ( db ) => async() => {
 module.exports = {
 
     selectSkaters,
-    selectSkateAward,
+    selectSkatersAwards,
 
 }

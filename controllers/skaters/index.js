@@ -2,7 +2,7 @@
 
 module.exports = {
 
-    getSkaters      : require('./getSkaters'),
-    getSkaterAwards : require('./getSkatersAwarded'),
+    getSkaters        : require('./getSkaters'),
+    getSkatersAwarded : require('./getSkatersAwarded'),
 
 }

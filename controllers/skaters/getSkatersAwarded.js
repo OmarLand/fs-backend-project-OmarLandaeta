@@ -6,7 +6,7 @@ const errors  = require('../../misc/errors');
 
 module.exports = ( db ) => async(req, res, next) => {
     
-    const dbRes = await queries.selectSkaterAwards( await db )();
+    const dbRes = await queries.selectSkatersAwards( await db )();
 
     console.log('====>', dbRes);
 

@@ -6,8 +6,8 @@ const selectAllSkaters = () => sql.unsafe`
 `
 
 
-const selectSkaterAwards = () => sql.unsafe`
-    SELECT awards.competition, awards.award_date, skaters.name, tricks.name, tricks.description
+const getSkatersAwarded = () => sql.unsafe`
+    SELECT awards.competition, awards.award_date, skaters.name AS skater, tricks.name AS trick, tricks.description
     FROM skaters
     INNER JOIN awards ON skaters.id = awards.skater_id
     INNER JOIN tricks ON tricks.id = awards.trick_id
@@ -16,5 +16,5 @@ const selectSkaterAwards = () => sql.unsafe`
 
 module.exports = {
     selectAllSkaters,
-    selectSkaterAwards,
+    getSkatersAwarded,
 }
