@@ -24,9 +24,37 @@ const selectTricks = (db) => async () => {
 
 }
 
+const insertNewTrick = ( db ) => async (infoTrick) => {
+
+    try{
+
+        await db.query(sql.unsafe`
+            INSERT INTO tricks ( name, description, difficulty )
+            VALUES (
+                 ${infoTrick.name}, 
+                 ${infoTrick.description}, 
+                 ${infoTrick.difficulty} 
+            )
+        `)
+
+        return {
+            ok : true,
+        }
+
+    } catch( error ) {
+        return {
+            ok      : false,
+            message : error.message,
+        }
+    }
+
+}
+
+
 
 module.exports = {
 
     selectTricks,
+    insertNewTrick,
 
 }

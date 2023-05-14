@@ -5,6 +5,7 @@ const trickControllers = require('../controllers/tricks');
 // Voy creando acá mis rutas de acceso a los endpoints
 module.exports = ( db ) => {
     router.get( '/', trickControllers.getTricks(db) );
+    router.post( '/new', trickControllers.newTricks(db) );
 
 
     return router;

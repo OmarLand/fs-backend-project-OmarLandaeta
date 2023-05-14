@@ -84,3 +84,31 @@ POST:
 ```js
   localhost:4000/skaters/new
 ```
+- El body para la inserción sería asi:
+```js
+
+{
+    "name"       : "Danny Way",
+    "birth_city" : "California",
+    "birth_date" : "1989-01-05"
+}
+
+```
+
+17. Se crea el endpoint para la inserción de nuevos trucos en la tabla Tricks.
+- Me permite insertar nuevos trucos para mostrar luego
+
+POST:
+```js
+  localhost:4000/tricks/new
+```
+- El body para la inserción sería asi:
+```js
+
+{
+    "name"        : "NombreTruco",
+    "description" : "Descripción resumida del truco",
+    "difficulty"  : "1" //Deberá ser numérico
+}
+
+```
