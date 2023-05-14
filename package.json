@@ -8,9 +8,7 @@
     "start": "node index.js",
     "dev": "set PORT=4000 & nodemon index.js",
     "docker:up": "docker-compose up",
-    "docker:start": "docker-compose start",
-    "db:create": "node scripts/creation.js",
-    "db:insert": "node scripts/insertion.js"
+    "docker:start": "docker-compose start"
   },
   "keywords": [],
   "author": "",

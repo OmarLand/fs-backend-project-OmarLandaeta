@@ -14,7 +14,16 @@ const getSkatersAwarded = () => sql.unsafe`
     ORDER BY awards.award_date ASC 
 `
 
+const nameOnly = ( id = null ) => sql.unsafe`
+    SELECT skaters.name AS skater, awards.competition, awards.award_date, tricks.name AS trick, tricks.description
+    FROM skaters
+    INNER JOIN awards ON skaters.id = awards.skater_id
+    INNER JOIN tricks ON tricks.id = awards.trick_id
+    WHERE  skaters.id = ${id}
+`
+
 module.exports = {
     selectAllSkaters,
     getSkatersAwarded,
+    nameOnly,
 }

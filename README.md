@@ -1,5 +1,5 @@
 ## Descripción del proyecto: 👨‍💻
-
+- Se trata de un proyecto base que hace un registro de competiciones en el deporte Skateboard, donde podremos ver cada atleta con su truco ganador.
 
 ## Preparando mi proyecto de Back: 🐱‍🏍🚀👨‍💻
  
@@ -11,13 +11,11 @@
 
 4. Creo mi fichero "index.js" principal
 
-5. Agrego: los Scripts patra crear las tablas "db:create", Para insertar los datos iniciales "db:insert"
-
 ## Buscando ideas para armar mis tablas para las bases de datos del proyecto:
 
 6. Creamos las tablas de este proyecto serían: "skaters", "tricks", "awards", donde awards son los premios recibidos por los atletas en su momento, además de los tricks dominados por cada uno de los atletas.
 
-7. Se añade las librerias para la autenticación y autorización a mi app
+7. Se añade las librerias para la autenticación y autorización a mi app ✌💪
 
 8. Creo el endpoint de registro SIGNUP:
   - Con este endpoint realizo el registro de usuarios en mi base de datos para acceder a las rutas que corresponda
@@ -53,7 +51,15 @@ GET:
   localhost:4000/skaters
 ```
 
-13. Se crea el endpoint para ver trucos TRICKS:
+13. Se crea el endpoint para buscar por ID un atleta determinado y mirar sus competiciones ganadas, truco y año ganador respectivamente
+
+GET:
+```js
+  localhost:4000/skater/:id
+```
+
+
+14. Se crea el endpoint para ver trucos TRICKS:
 - Permite visualizar todos aquellos trucos, desde el más básico al mas complejo de todos con una descripción de ello
 
 GET:
@@ -61,7 +67,7 @@ GET:
   localhost:4000/tricks
 ```
 
-14.  Se crea el endpoint para ver los premios de cada Atleta - Awards:
+15.  Se crea el endpoint para ver los premios de cada Atleta - Awards:
 - Permite ver todos los premios registrados que están relacionados con el atleta y con el truco ganador.
 
 GET:
@@ -69,7 +75,7 @@ GET:
   localhost:4000/awards
 ```
 
-15. Se crea el endpoind para ver los atletas según el truco y las competiciones ganadas por año de menor a mayor:
+16. Se crea el endpoind para ver los atletas según el truco y las competiciones ganadas por año de menor a mayor:
 - Muestra las competiciones ganadas por los atletas, según el premio, truco ganado y ciudad donde ganó:
 
 GET:
@@ -77,7 +83,7 @@ GET:
   localhost:4000/skaters/competitions
 ```
 
-16. Se crea el endpoint para la inserción de nuevos skaters en la tabla skaters.
+17. Se crea el endpoint para la inserción de nuevos skaters en la tabla skaters.
 - Me permite insertar nuevos skaters para mostrar luego
 
 POST:
@@ -95,7 +101,7 @@ POST:
 
 ```
 
-17. Se crea el endpoint para la inserción de nuevos trucos en la tabla Tricks.
+18. Se crea el endpoint para la inserción de nuevos trucos en la tabla Tricks.
 - Me permite insertar nuevos trucos para mostrar luego
 
 POST:
@@ -113,7 +119,7 @@ POST:
 
 ```
 
-18. Se crea el endpoint para agregar nuevos premios y se le asigna de forma aleatoria a los skaters con un truco random ganador:
+19. Se crea el endpoint para agregar nuevos premios y se le asigna de forma aleatoria a los skaters con un truco random ganador:
 
 POST:
 ```js
@@ -127,3 +133,4 @@ POST:
       "position"    : "1" //Deberá ser numérico
   }
 ```
+

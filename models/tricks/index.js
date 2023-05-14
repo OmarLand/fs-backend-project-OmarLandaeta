@@ -11,7 +11,7 @@ const selectTricks = (db) => async () => {
         const response = await db.query( selectAllTricks() );
 
         return {
-            ok    : true,
+            ok       : true,
             response : response.rows
         }
 

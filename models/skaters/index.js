@@ -1,7 +1,7 @@
 const { sql } = require('slonik');
 
 // Llamo a la función que está dentro de fichero Queries
-const { selectAllSkaters, getSkatersAwarded } = require('./queries');
+const { selectAllSkaters, getSkatersAwarded, nameOnly } = require('./queries');
 
 // Selecciono los atletas de la tabla skaters
 const selectSkaters = (db) => async () => {
@@ -69,7 +69,27 @@ const insertNewSkater = ( db ) => async (infoSkater) => {
 
 }
 
+// 
 
+const selectSkaterById = (db) => async ( id = null ) => {
+    try{
+
+        const response = await db.query( nameOnly( id ) )
+
+        //console.log( response );
+
+        return {
+            ok       : true,
+            response : response.rows
+        }
+
+    } catch( error ){
+        return{
+            ok      : false,
+            message : error.message,
+        }
+    }
+}
 
 
 module.exports = {
@@ -77,5 +97,6 @@ module.exports = {
     selectSkaters,
     selectSkatersAwards,
     insertNewSkater,
+    selectSkaterById,
 
 }

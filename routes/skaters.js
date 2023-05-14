@@ -6,6 +6,7 @@ const skaterControllers = require('../controllers/skaters');
 module.exports = ( db ) => {
     router.get( '/', skaterControllers.getSkaters(db) );
     router.get( '/competitions', skaterControllers.getSkatersAwarded(db) );
+    router.get( '/:id', skaterControllers.getSkaterById(db) );
     router.post( '/new', skaterControllers.newSkaters(db) );
 
     return router;
